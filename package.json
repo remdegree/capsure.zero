@@ -1,0 +1,71 @@
+{
+  "name": "capsure.zero",
+  "version": "1.0.0",
+  "description": "A lightweight, TypeScript-first IndexedDB caching library for JavaScript applications. Features persistent storage, TTL-based expiration, cache-first fetching, request deduplication, preloading, and React integration.",
+  "type": "module",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./react": {
+      "types": "./dist/react.d.ts",
+      "import": "./dist/react.js",
+      "require": "./dist/react.cjs"
+    }
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && tsc",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run typecheck && npm test && npm run build",
+    "preview": "vite preview"
+  },
+  "keywords": [
+    "indexeddb",
+    "cache",
+    "browser-cache",
+    "ttl",
+    "react",
+    "typescript",
+    "offline-cache",
+    "preload",
+    "polling",
+    "capsure.zero",
+    "capsure-zero",
+    "capsure"
+  ],
+  "license": "MIT",
+  "peerDependenciesMeta": {
+    "react": {
+      "optional": true
+    },
+    "react-dom": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.3",
+    "@types/react": "^18.3.31",
+    "@types/react-dom": "^18.3.0",
+    "fake-indexeddb": "^6.2.5",
+    "typescript": "^5.6.3",
+    "vite": "^5.4.0",
+    "vitest": "^1.6.1"
+  },
+  "peerDependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  }
+}
