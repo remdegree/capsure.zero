@@ -27,7 +27,7 @@ With cache-first fetching, TTL-based expiration, request deduplication, and data
 ## Installation
 
 ```bash
-npm install capsure-zero
+npm install capsure.zero
 ```
 
 ## Quick Start
@@ -35,7 +35,7 @@ npm install capsure-zero
 ### 1. Initialize the cache
 
 ```typescript
-import { IndexedDBCache } from "capsure-zero";
+import { IndexedDBCache } from "capsure.zero";
 
 const cache = new IndexedDBCache({
   dbName: "my-app-cache",
@@ -185,7 +185,7 @@ Capsure.Zero provides a preload utility for fetching and caching multiple resour
 import {
   IndexedDBCache,
   preload,
-} from "capsure-zero";
+} from "capsure.zero";
 
 const cache = new IndexedDBCache({
   dbName: "my-app-cache",
@@ -216,7 +216,7 @@ Preloading is useful when applications need frequently accessed resources or ref
 Capsure.Zero provides a separate React entry point.
 
 ```typescript
-import { PreloadProvider } from "capsure-zero/react";
+import { PreloadProvider } from "capsure.zero/react";
 ```
 
 The React adapter provides integration with React applications for preload-related workflows.
